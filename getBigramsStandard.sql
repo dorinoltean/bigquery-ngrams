@@ -15,7 +15,7 @@ WITH sentences AS (
   SELECT 'hello   world how are you ' AS sentence
 )
 
-SELECT CONCAT('-',bigrams,'-') FROM  
+SELECT bigrams FROM  
  (
 	SELECT 
 		SPLIT
