@@ -34,7 +34,7 @@ SELECT bigrams FROM
 	FROM (
 		SELECT 
 			-- Sanitize text
-			REGEXP_REPLACE(sentence , r'[\[\]\\`,~!@#$%^&*()\-_=+}{\'";:/?.>,<]*(.*?)[\[\]\\`,~!@#$%^&*()\-_=+}{\'";:/?.>,<]*?(\s+?|$)', '\\1 ') as sentence
+			REGEXP_REPLACE(sentence , r'[\[\]\\`,~!@#$%^&*()\-_=+}{\'";:/?.>,<\s]*(.*?)[\[\]\\`,~!@#$%^&*()\-_=+}{\'";:/?.>,<]*?(\s+?|$)', '\\1 ') as sentence
 		FROM sentences
 	)
 )  t
